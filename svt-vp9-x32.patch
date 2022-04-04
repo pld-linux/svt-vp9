@@ -1,0 +1,11 @@
+--- SVT-VP9-0.3.0/Source/Lib/ASM_SSE2/x86inc.asm.orig	2020-10-30 02:51:10.000000000 +0100
++++ SVT-VP9-0.3.0/Source/Lib/ASM_SSE2/x86inc.asm	2022-04-04 21:14:18.238979753 +0200
+@@ -158,6 +158,8 @@ CONFIG_NON_GREEDY_MV equ 0
+     %define FORMAT_ELF 1
+ %elifidn __OUTPUT_FORMAT__,elf64
+     %define FORMAT_ELF 1
++%elifidn __OUTPUT_FORMAT__,elfx32
++    %define FORMAT_ELF 1
+ %endif
+ 
+ %define FORMAT_MACHO 0

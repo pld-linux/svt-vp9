@@ -8,6 +8,7 @@ Group:		Libraries
 #Source0Download: https://github.com/OpenVisualCloud/SVT-VP9/releases
 Source0:	https://github.com/OpenVisualCloud/SVT-VP9/archive/v%{version}/SVT-VP9-%{version}.tar.gz
 # Source0-md5:	1490ef3d1ce01ff06fd289a0df46870f
+Patch0:		%{name}-x32.patch
 URL:		https://github.com/OpenVisualCloud/SVT-VP9
 BuildRequires:	cmake >= 2.8
 BuildRequires:	rpmbuild(macros) >= 1.605
@@ -41,6 +42,7 @@ Pliki nagłówkowe biblioteki SVT-VP9.
 
 %prep
 %setup -q -n SVT-VP9-%{version}
+%patch0 -p1
 
 %build
 install -d build
