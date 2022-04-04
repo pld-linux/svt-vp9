@@ -47,7 +47,7 @@ install -d build
 cd build
 %cmake .. \
 %ifarch x32
-	-DCMAKE_ASM_NASM_OBJECT_FORMAT MATCHES=elfx32
+	-DCMAKE_ASM_NASM_OBJECT_FORMAT=elfx32
 %endif
 
 %{__make}
