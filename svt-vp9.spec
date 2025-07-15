@@ -42,7 +42,7 @@ Pliki nagłówkowe biblioteki SVT-VP9.
 
 %prep
 %setup -q -n SVT-VP9-%{version}
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 install -d build
